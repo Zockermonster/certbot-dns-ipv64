@@ -56,7 +56,7 @@ class IPv64Client():
         self.auth_header = {'Authorization': 'Bearer ' + bearer_token}
 
     def _get_dns_zone(self, domain: str) -> str:
-        stripped_domain = '.'.join(domain.split('.')[-2:])
+        stripped_domain = '.'.join(domain.split('.')[-3:])
         return stripped_domain
 
     def _get_domain_prefix(self, domain: str, dns_zone: str) -> str:
